@@ -66,20 +66,33 @@ body {
 }
 
 
-ul li h4 {
-  margin: 0;
-}
-
-ul {
+ul#navbar {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  background-color: #9C27B0;
-  display: flex;
+  display: flex;          /* horizontal on desktop */
   justify-content: flex-end;
+  flex-wrap: wrap;
 }
 
-ul li a {
+ul#navbarMob {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;        
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+ul#navbar li {
+  position: relative;
+}
+
+ul#navbarMob li {
+  position: relative;
+}
+
+ul#navbar li a {
   display: block;
   color: #73A3CD;
   padding: 5px 16px;
@@ -87,13 +100,23 @@ ul li a {
   font-size: 24px;
 }
 
-ul li a:hover {
-  background-color: #6C2A90;
+ul#navbarMob li a {
+  display: block;
+  color: #73A3CD;
+  padding: 5px 16px;
+  text-decoration: none;
+  font-size: 24px;
 }
 
 
-.dropdown {
-  position: relative;
+ul#navbar li a:hover {
+  background-color: #6C2A90;
+  text-decoration: underline;
+}
+
+ul#navbarMob li a:hover {
+  background-color: #6C2A90;
+  text-decoration: underline;
 }
 
 /* Style the dropdown button */
@@ -113,16 +136,30 @@ ul li a:hover {
   background-color: #9C27B0;
   width: 100%;
   overflow:auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* Links inside dropdown content */
-.dropdown-content a {
+ul#navbar .dropdown-content li a {
   color: #73A3CD;
   padding: 14px 16px;
   text-decoration: none;
   display: block;
   font-size: 18px;
   text-align: right;
+
+}
+
+ul#navbarMob .dropdown-content li a {
+  color: #73A3CD;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+  text-align: right;
+
 }
 
 /* Change color of dropdown links on hover */
@@ -141,7 +178,49 @@ ul li a:hover {
   background-color: #6C2A90;
 }
 
-</style>	
+/* Hamburger Button - hidden on desktop */
+.hamburger {
+  display: none;
+  background-color: #9C27B0;
+  color: #73A3CD;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  padding: 5px 16px;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+  .hamburger {
+    display: block;   /* show hamburger */
+  }
+
+  ul#navbar {
+    flex-direction: column; 
+    align-items: flex-start;
+    display: none;           
+    width: 100%;
+  }
+  
+  ul#navbarMob {
+    flex-direction: column;  
+    align-items: flex-start;
+    display: none;           
+    width: 100%;
+  }
+
+  ul#navbar.open {
+    display: flex;           /* show when hamburger clicked */
+  }
+  
+  ul#navbarMob.open {
+    display: flex;           /* show when hamburger clicked */
+  }
+
+
+}
+
+</style>
 
   </head>
 <body class="w3-light-grey">
@@ -149,28 +228,66 @@ ul li a:hover {
 <!-- Page Container -->
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
 
-  <div class="desktop">
+<!-- This is awful but I can't fix it right now -->
+
+<div class="desktop">
+<div class="mobileHide">
   <header class="w3-container w3-center w3-margin-top">
-  <div class="w3-display-container">
+  <div class="w3-display-container" style="max-width:1400px;">
   <div class="w3-card w3-purple", style="max-width:1400px; text-align: right;">
-  <div class="navbar">
-	  <ul>
-		<li><a href="index.html">[Home]</a></li>
-		<li><a href="index.html#papers">[Publications]</a></li>
-		<li><a href="index.html#spotted">[Where I've been]</a></li>
-		<div class="dropdown">
-	  <li><a class="dropbtn" href="crosswords.html">[Crosswords]</a></li>
-		<li class="dropdown-content">
-		  <a href="advent.html">[Advent 2025]</a>
-		</li>
-	  </div>
-	  </ul>
-	</div>
+    <div class="navbar-container">
+    <!-- Hamburger Menu for Small Screen -->
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    
+    <ul id="navbar">
+      <li><a href="index.html">[Home]</a></li>
+      <li><a href="index.html#papers">[Publications]</a></li>
+      <li><a href="index.html#spotted">[Where I've been]</a></li>
+      <li class="dropdown">
+        <a href="crosswords.html" class="dropbtn">[Crosswords]</a>
+        <ul class="dropdown-content">
+          <li><a href="advent.html">[Advent 2025]</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
   </div>
   </div>
   </header>
+  
+
+
 </div>
 
+<div class="mobileShow">
+  <header class="w3-container w3-center w3-margin-top">
+  <div class="w3-display-container" style="max-width:1400px;">
+  <div class="w3-card w3-purple", style="max-width:1400px; text-align: right;">
+    <div class="navbar-container">
+    <!-- Hamburger Menu for Small Screen -->
+    <button class="hamburger" onclick="toggleMenuMob()">☰</button>
+    
+    <ul id="navbarMob">
+      <li><a href="index.html#home">[Home]</a></li>
+      <li><a href="index.html#papers">[Publications]</a></li>
+      <li><a href="index.html#spotted">[Where I've been]</a></li>
+      <li class="dropdown">
+        <a href="crosswords.html" class="dropbtn">[Crosswords]</a>
+        <ul class="dropdown-content">
+          <li><a href="advent.html">[Advent 2025]</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+  </div>
+  </div>
+  </header>
+  
+
+
+</div>  
+
+</div>
   <!-- The Grid -->
   <div class="w3-row-padding">
     <div class="desktop">
