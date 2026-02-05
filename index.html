@@ -75,7 +75,20 @@ ul#navbar {
   flex-wrap: wrap;
 }
 
+ul#navbarMob {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;        
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
 ul#navbar li {
+  position: relative;
+}
+
+ul#navbarMob li {
   position: relative;
 }
 
@@ -87,7 +100,21 @@ ul#navbar li a {
   font-size: 24px;
 }
 
+ul#navbarMob li a {
+  display: block;
+  color: #73A3CD;
+  padding: 5px 16px;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+
 ul#navbar li a:hover {
+  background-color: #6C2A90;
+  text-decoration: underline;
+}
+
+ul#navbarMob li a:hover {
   background-color: #6C2A90;
   text-decoration: underline;
 }
@@ -116,6 +143,16 @@ ul#navbar li a:hover {
 
 /* Links inside dropdown content */
 ul#navbar .dropdown-content li a {
+  color: #73A3CD;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+  text-align: right;
+
+}
+
+ul#navbarMob .dropdown-content li a {
   color: #73A3CD;
   padding: 14px 16px;
   text-decoration: none;
@@ -159,15 +196,27 @@ ul#navbar .dropdown-content li a {
   }
 
   ul#navbar {
-    flex-direction: column;  /* vertical on mobile */
+    flex-direction: column; 
     align-items: flex-start;
-    display: none;           /* hidden by default */
+    display: none;           
+    width: 100%;
+  }
+  
+  ul#navbarMob {
+    flex-direction: column;  
+    align-items: flex-start;
+    display: none;           
     width: 100%;
   }
 
   ul#navbar.open {
     display: flex;           /* show when hamburger clicked */
   }
+  
+  ul#navbarMob.open {
+    display: flex;           /* show when hamburger clicked */
+  }
+
 
 }
 
