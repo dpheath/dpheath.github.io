@@ -219,9 +219,9 @@ ul#navbar .dropdown-content li a {
   <div class="w3-card w3-purple", style="max-width:1400px; text-align: right;">
     <div class="navbar-container">
     <!-- Hamburger Menu for Small Screen -->
-    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    <button class="hamburger" onclick="toggleMenuMob()">☰</button>
     
-    <ul id="navbar">
+    <ul id="navbarMob">
       <li><a href="#home">[Home]</a></li>
       <li><a href="#papers">[Publications]</a></li>
       <li><a href="#spotted">[Where I've been]</a></li>
@@ -538,6 +538,11 @@ function padWithZero(str, minLength) {
 
 function toggleMenu() {
   const navbar = document.getElementById("navbar");
+  navbar.classList.toggle("open");
+}
+
+function toggleMenuMob() {
+  const navbar = document.getElementById("navbarMob");
   navbar.classList.toggle("open");
 }
 
