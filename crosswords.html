@@ -59,6 +59,91 @@
       }
     </style>   
 
+<style>
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+ul li h4 {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #9C27B0;
+  display: flex;
+  justify-content: flex-end;
+}
+
+ul li a {
+  display: block;
+  color: #73A3CD;
+  padding: 5px 16px;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+ul li a:hover {
+  background-color: #6C2A90;
+}
+
+
+.dropdown {
+  position: relative;
+}
+
+/* Style the dropdown button */
+.dropbtn {
+  background-color: #9C27B0;
+  color: #73A3CD;
+  padding: 5px 16px;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #9C27B0;
+  width: 100%;
+  overflow:auto;
+}
+
+/* Links inside dropdown content */
+.dropdown-content a {
+  color: #73A3CD;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+  text-align: right;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #6C2A90;
+  text-decoration: underline;
+}
+
+/* Show the dropdown content on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change background color of dropdown button on hover */
+.dropdown:hover .dropbtn {
+  background-color: #6C2A90;
+}
+
+</style>
+
+
   </head>
 <body class="w3-light-grey">
 
@@ -69,13 +154,19 @@
   <header class="w3-container w3-center w3-margin-top">
   <div class="w3-display-container">
   <div class="w3-card w3-purple", style="max-width:1400px; text-align: right;">
-  <h4><a <a href="index.html", rel="noopener noreferrer">[Home]</a>&emsp;&emsp;&ensp;
-  <a href="index.html#papers", rel="noopener noreferrer">[Publications]</a>&ensp;
-  <div class="mobileShow"><br></div>&emsp;&emsp;
-  <a href="index.html#spotted", rel="noopener noreferrer">[Where I've been]</a>&nbsp;&emsp;&emsp;&ensp;
-  <a href="crosswords.html"">[Crosswords]</a>&ensp;&ensp;&ensp;&ensp;
-  <a href="advent.html">[Cryptic Advent 2025]</a>&ensp;
-  </h4>
+  <div class="navbar">
+	  <ul>
+		<li><a href="index.html">[Home]</a></li>
+		<li><a href="index.html#papers">[Publications]</a></li>
+		<li><a href="index.html#spotted">[Where I've been]</a></li>
+		<div class="dropdown">
+	  <li><a class="dropbtn" href="crosswords.html">[Crosswords]</a></li>
+		<li class="dropdown-content">
+		  <a href="advent.html">[Advent 2025]</a>
+		</li>
+	  </div>
+	  </ul>
+	</div>
   </div>
   </div>
   </header>
@@ -217,7 +308,6 @@ function padWithZero(str, minLength) {
 
 </body>
 </html>
-
 
 
 
