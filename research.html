@@ -8,7 +8,7 @@
     <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-	<meta name="google-site-verification" content="SVrpuGZSbVkb2XoyP4knGOXbnWpaEQSOQ1b_H1R67r4" />
+	<meta name="google-site-verification" content="HljCmvOe77GIolVY2oPoIYgQMGMBQGa9rr8EmpBwftE" />
     <style>
       html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
     </style>
@@ -57,7 +57,7 @@
         background-color: transparent;
         text-decoration: underline;
       }
-    </style> 
+    </style>   
 
 <style>
 body {
@@ -247,11 +247,14 @@ ul#navbarMob .dropdown-content li a {
 
 </style>
 
+
   </head>
 <body class="w3-light-grey">
 
+
+
 <!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
+<div class="w3-content w3-margin-top" style="max-width:1400px;", id="home">
 
 <!-- This is awful but I can't fix it right now -->
 
@@ -266,7 +269,7 @@ ul#navbarMob .dropdown-content li a {
     
     <ul id="navbar">
       <li><a href="index.html">[Home]</a></li>
-      <li><a href="research.html">[Research]</a></li>
+      <li><a href="#">[Research]</a></li>
       <li><a href="spotted.html">[Where I've been]</a></li>
       <li class="dropdown">
         <button class="dropbtn">Crosswords
@@ -274,7 +277,7 @@ ul#navbarMob .dropdown-content li a {
 		</button>
 		<ul class="dropdown-content">
 		  <li><a href="crosswords.html">[Crosswords]</a></li>
-		  <li><a href="#">[Advent 2025]</a></li>
+		  <li><a href="advent.html">[Advent 2025]</a></li>
 		</ul>
       </li>
     </ul>
@@ -297,7 +300,7 @@ ul#navbarMob .dropdown-content li a {
     
     <ul id="navbarMob">
       <li><a href="index.html">[Home]</a></li>
-      <li><a href="research.html">[Research]</a></li>
+      <li><a href="#">[Research]</a></li>
       <li><a href="spotted.html">[Where I've been]</a></li>
       <li class="dropdown">
         <button class="dropbtn">Crosswords
@@ -305,7 +308,7 @@ ul#navbarMob .dropdown-content li a {
 		</button>
 		<ul class="dropdown-content">
 		  <li><a href="crosswords.html">[Crosswords]</a></li>
-		  <li><a href="#">[Advent 2025]</a></li>
+		  <li><a href="advent.html">[Advent 2025]</a></li>
 		</ul>
       </li>
     </ul>
@@ -318,23 +321,35 @@ ul#navbarMob .dropdown-content li a {
 
 </div>  
 
+
 </div>
+
+
   <!-- The Grid -->
   <div class="w3-row-padding">
+
     <div class="desktop">
       <!-- Left Column -->
       <div class="mobileHide">
         <div class="w3-col" style="width:260px">
         <div class="w3-white w3-text-grey w3-card-4">
           <div class="w3-display-container">
-            <img src="advent2025.png" style="width:100%" alt="Advent 2025">
+            <img src="graphs.png" style="width:93%" alt="Graphs">
           </div>
           <div class="w3-container">
-            <p><center><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-purple"><br></center></i>&emsp;&emsp;&ensp;Office 1.127<br>&emsp;&emsp;&ensp;Alan Turing Building<br>&emsp;&emsp;&ensp;Manchester<br>&emsp;&emsp;&ensp;M13 9PY<br>&emsp;&emsp;&ensp;///gravy.aura.bonds</p>
+            <p><center><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-purple"></i><br>
+			Office 1.127<br>
+			Alan Turing Building<br>
+			Manchester<br>
+			M13 9PY<br>
+			///gravy.aura.bonds
+			</center></p>
             <p><center><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-purple"></center></i><center>daniel.heath-2@manchester.ac.uk</center></p>
-            <p><center><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-purple"></i></center><center>0161 275 7649</center></p>
+            <p><center><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-purple"></i><br>
+			0161 275 7649</center></p>
             <hr>
-          </div>          
+          </div>
+          
         </div><br>
         <p><center>This information on this page was last updated on <span id="lastmod"></span></p>
       <!-- End Left Column -->
@@ -343,60 +358,76 @@ ul#navbarMob .dropdown-content li a {
   </div>
     <!-- Right Column -->
     <div class="w3-rest">
+      <!-- Mobile Only -->
+      <div class="mobileShow">
+        <div class="w3-display-container">
+          <img object-fit: cover; src="me_cropped.png" alt="Me">
+          <div class="w3-display-topleft w3-container w3-text-purple">
+            <h4>Daniel Heath</h4><h5>Personal Webpage</h5>
+          </div>
+        </div>
+        <div class="w3-container">
+            <p><center><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-purple"></i><br>
+			Office 1.127<br>
+			Alan Turing Building<br>
+			Manchester<br>
+			M13 9PY<br>
+			///gravy.aura.bonds
+			</center></p>
+            <p><center><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-purple"></center></i><center>daniel.heath-2@manchester.ac.uk</center></p>
+            <p><center><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-purple"></i><br>
+			0161 275 7649</center></p>
+            <hr>
+          </div>
+      </div>
       <!-- Mobile Hidden -->
       <div class="mobileHide">
         <img object-fit: cover; src="manchester.png" alt="Manchester" width="128" height="128">
       </div>
+	  
+	  
       <div class="w3-container w3-card w3-white w3-margin-bottom">
-		<div class="mobileShow">
-			<h2 class="w3-text-grey"><i class="fas fa-solid fa-candy-cane fa-spin fa-fw w3-margin-right w3-xxlarge w3-text-purple"></i>Cryptic Advent 2025 </h2>
-		</div>
-		<div class="mobileHide">
-			<h2 class="w3-text-grey"><i class="fas fa-solid fa-candy-cane fa-spin fa-fw w3-margin-right w3-xxlarge w3-text-purple"></i>Cryptic Advent 2025 <i class="fas fa-solid fa-snowman fa-spin fa-fw w3-margin-right w3-xxlarge w3-text-purple"></i></h2>
-		</div>
-		<p>Welcome to Cryptic Advent 2025! This is a 24-day cryptic crossword puzzle <b>suitable for total beginners and experienced solvers</b> of cryptic crosswords.</p>
+        <h2 class="w3-text-grey"><i class="fa fa-newspaper-o fa-fw w3-margin-right w3-xxlarge w3-text-purple"></i>Publications and Preprints</h2>
+	<i class="fas fa-exclamation-circle fa-fw w3-margin-right w3-large w3-text-purple"></i>Preprints should be cited with caution. Please contact me if you'd like to discuss further.
 		
-        <p>Daily, 3-4 new cryptic clues will be released without any information on length or location... those details become available the following day. Two days after a clue releases, you will get some hints on how to solve it. This is heavily inspired by (i.e. I've blantantly stolen the idea of) <a href="https://www.danielpeake.com/?page_id=426", rel="noopener noreferrer">Daniel Peake's PUZZLEVENT 2024</a>. My thanks to AP, JH, JA and FS for contributing some guest clues for this year's puzzle. Please note, I'm a one-person operation so clues may not appear at a regular time! I aim to have clues available by early afternoon each day.</p>
-		
-		<p> At the end of the event, the first person to send me a completed grid will recieve absolutely nothing.</p>
 
-<p>For my normal cryptics, please see my <a href="crosswords.html", rel="noopener noreferrer">Crosswords</a> page.</p>
+<p><span style="color: purple">[4]</span> <b>Graphical approaches to left adequate monoids</b><br>
+<i>PhD Thesis, University of Manchester. 2025. </i><br>
+<span style="color: purple">December 2025</span> <a href="https://research.manchester.ac.uk/en/studentTheses/graphical-approaches-to-left-adequate-monoids/", target="_blank", rel="noopener noreferrer">[Full Text]</a><br>		
+<small>Abstract: <i>In this thesis, we explore the class of left adequate monoids as algebras of type (2,1,0). Motivated by advances in geometric and combinatorial inverse semigroup theory, we apply combinatorial methods in order to generalise famed results. We provide some new identities which hold in all left adequate semigroups which are most easily viewed via the trees of Kambites. We then consider the monogenic case, and give a representation of the monogenic free left adequate monoid FLAd1 inspired by Gluskin’s representation of the monogenic free inverse monoid. By leveraging our representation, we directly calculate the spherical growth of FLAd1 and show it admits a relationship with partitions and grows intermediately. Conversely, we demonstrate the exponential growth of monogenic free two-sided adequate monoids, and in both one and two-sided free structures of higher rank. This generalises work of Kambites et al. on free inverse monoids. We then introduce a new class of left adequate monoids which we term pretzel monoids. Akin to the expansions of Margolis and Meakin, these are monoids of birooted graphs whose operations are given by a gluing and folding procedure similar to operations of Stephen. We show that pretzel monoids admit a class of presentations in the quasi-variety of left adequate monoids which naturally mirrors that of Margolis-Meakin expansions for inverse monoids. We explore properness and categorical properties, and show them to be free idempotent-pure expansions of special right cancellative monoids.</i></small></p>
 
-<!-- <span style="color: purple">[14]</span> <a href="crosswords/14.pdf", target="_blank", rel="noopener noreferrer">Cryptic Crossword #14</a>, <span style="color: purple">24-02-2025</span>. <b>**NEW**</b><br> -->
-
-<p>
-<span style="color: purple">&ensp;[Day 0]</span> <a href="advent/grid.pdf", target="_blank", rel="noopener noreferrer"><b>See the grid here!</b></a><br>
-<span style="color: purple">&ensp;[Day 1]</span> <a href="advent/1.png", target="_blank", rel="noopener noreferrer">Day 1</a><br>
-<span style="color: purple">&ensp;[Day 2]</span> <a href="advent/2.png", target="_blank", rel="noopener noreferrer">Day 2</a><br>
-<span style="color: purple">&ensp;[Day 3]</span> <a href="advent/3.png", target="_blank", rel="noopener noreferrer">Day 3</a><br>
-<span style="color: purple">&ensp;[Day 4]</span> <a href="advent/4.png", target="_blank", rel="noopener noreferrer">Day 4</a><br>
-<span style="color: purple">&ensp;[Day 5]</span> <a href="advent/5.png", target="_blank", rel="noopener noreferrer">Day 5</a><br>
-<span style="color: purple">&ensp;[Day 6]</span> <a href="advent/6.png", target="_blank", rel="noopener noreferrer">Day 6</a><br>
-<span style="color: purple">&ensp;[Day 7]</span> <a href="advent/7.png", target="_blank", rel="noopener noreferrer">Day 7</a><br>
-<span style="color: purple">&ensp;[Day 8]</span> <a href="advent/8.png", target="_blank", rel="noopener noreferrer">Day 8</a><br>
-<span style="color: purple">&ensp;[Day 9]</span> <a href="advent/9.png", target="_blank", rel="noopener noreferrer">Day 9</a><br>
-<span style="color: purple">[Day 10]</span> <a href="advent/10.png", target="_blank", rel="noopener noreferrer">Day 10</a><br>
-<span style="color: purple">[Day 11]</span> <a href="advent/11.png", target="_blank", rel="noopener noreferrer">Day 11</a><br>
-<span style="color: purple">[Day 12]</span> <a href="advent/IMG_1060.png", target="_blank", rel="noopener noreferrer">Day 12</a><br>
-<span style="color: purple">[Day 13]</span> <a href="advent/13.png", target="_blank", rel="noopener noreferrer">Day 13</a><br>
-<span style="color: purple">[Day 14]</span> <a href="advent/14.png", target="_blank", rel="noopener noreferrer">Day 14</a><br>
-<span style="color: purple">[Day 15]</span> <a href="advent/15.png", target="_blank", rel="noopener noreferrer">Day 15</a><br>
-<span style="color: purple">[Day 16]</span> <a href="advent/16.png", target="_blank", rel="noopener noreferrer">Day 16</a><br>
-<span style="color: purple">[Day 17]</span> <a href="advent/17.png", target="_blank", rel="noopener noreferrer">Day 17</a><br>
-<span style="color: purple">[Day 18]</span> <a href="advent/18.png", target="_blank", rel="noopener noreferrer">Day 18</a><br>
-<span style="color: purple">[Day 19]</span> <a href="advent/19.png", target="_blank", rel="noopener noreferrer">Day 19</a><br>
-<span style="color: purple">[Day 20]</span> <a href="advent/20.png", target="_blank", rel="noopener noreferrer">Day 20</a><br>
-<span style="color: purple">[Day 21]</span> <a href="advent/21.png", target="_blank", rel="noopener noreferrer">Day 21</a><br>
-<span style="color: purple">[Day 22]</span> <a href="advent/22.png", target="_blank", rel="noopener noreferrer">Day 22</a><br>
-<span style="color: purple">[Day 23]</span> <a href="advent/23.png", target="_blank", rel="noopener noreferrer">Day 23</a><br>
-<span style="color: purple">[Day 24]</span> <a href="advent/24.png", target="_blank", rel="noopener noreferrer">Day 24</a><br>
-You can now view the grid with clues included <a href="advent/advent.pdf", target="_blank", rel="noopener noreferrer">here</a>!<br>
-You can now view solutions <a href="advent/advent_Solutions.pdf", target="_blank", rel="noopener noreferrer">here</a>!<br>
 </p>
 
- 
+		  
+<p><span style="color: purple">[3]</span> <b>Growth and identities of monogenic free adequate monoids</b> (with <a href="https://sites.google.com/view/thomasaird", target="_blank" rel="noopener noreferrer">Thomas Aird</a>)<br>
+<i>Preprint (submitted). 2025. </i><br>
+<span style="color: purple">September 2025</span> <a href="https://arxiv.org/abs/2509.09543", target="_blank", rel="noopener noreferrer">[arXiv]</a><br>
+		<small>Abstract: <i>Motivated by recent advances in inverse semigroup theory, we investigate the growth of and identities satisfied by free left and free two-sided adequate monoids. We explicitly compute the growth of the monogenic free left adequate monoid with the usual unary monoid generating set and show it has intermediate growth owing to a connection with integer partitions. In the two-sided case, we establish a lower bound on the (idempotent) growth rate of the monogenic free adequate monoid, showing that it grows exponentially. We completely classify the enriched identities satisfied by the monogenic free left adequate monoid and deduce that it satisfies the same monoid identities as the sylvester monoid. In contrast, we show that the monogenic free two-sided adequate monoid satisfies no non-trivial monoid identities. </i></small></p>
+
+
+
+	<p><span style="color: purple">[2]</span> <b>Pretzel monoids</b> (with <a href="https://personalpages.manchester.ac.uk/staff/Mark.Kambites/index.php", target="_blank" rel="noopener noreferrer">Mark Kambites</a> and <a href="https://personalpages.manchester.ac.uk/staff/Nora.Szakacs/index.html", target="_blank" rel="noopener noreferrer">Nóra Szakács</a>)<br>
+<i><a href="https://www.worldscientific.com/worldscinet/IJAC?srsltid=AfmBOoqRCsn9z-A_OhpuoiTejAaeXxegsTcuzm3nO5_POfpSuPkAW9Il", target="_blank", rel="noopener noreferrer">International Journal of Algebra and Computation</a> Vol. 35(5), pp. 647-684. 2025. </i><br>
+<span style="color: purple">May 2025</span> <a href="https://arxiv.org/abs/2405.00589", target="_blank", rel="noopener noreferrer">[arXiv]</a> <a href="https://doi.org/10.1142/S0218196725500183", target="_blank", rel="noopener noreferrer">[Journal]</a><br>
+		<small>Abstract: <i>We introduce an interesting class of left adequate monoids which we call pretzel monoids. These, on the one hand, are monoids of birooted graphs with respect to a natural `glue-and-fold' operation, and on the other hand, are shown to be defined in the category of left adequate monoids by a natural class of presentations. They are also shown to be the free idempotent-pure expansions of right cancellative monoids, making them, in some sense, the left adequate analogues of Margolis-Meakin expansions for inverse monoids. The construction recovers the second author's geometric model of free left adequate monoids when the right cancellative monoid is free.</i></small></p>
+		
+	<p><span style="color: purple">[1]</span> <b>A collection of cancellative, singly aligned, non-group embeddable monoids</b> 		(with <a href="https://orcid.org/0009-0003-1858-0242", target="_blank" rel="noopener noreferrer">Milo Edwardes</a>)<br>
+		<i><a href="https://link.springer.com/journal/233", target="_blank", rel="noopener noreferrer">Semigroup Forum</a> Vol. 110(2), pp. 296-307. 2025. </i><br>
+		<span style="color: purple">April 2025</span> <a href="https://arxiv.org/abs/2405.20197", target="_blank", rel="noopener noreferrer">[arXiv]</a> <a href="https://doi.org/10.1007/s00233-025-10509-2", target="_blank", rel="noopener noreferrer">[Journal]</a><br>
+		<small>Abstract: <i>By classical results of Malcev, cancellative monoids need not be group-embeddable. In this paper, we describe and give presentations for and study an infinite family Mn of cancellative monoids which are not group-embeddable, originating from Malcev's original work. We show that Mn is singly aligned for n ≥ 2, owing to applications in the study of C*-algebras by Brix, Bruce and Dor-On. We finish by showing that M1 is not singly aligned, but is 2-aligned. </i></small></p>    
+	
+		
       </div>
-	 
+	  
+	  
+
+    <!-- Mobile Only -->
+    <div class = "mobileShow">
+      <div class="w3-display-container">
+        <img src="https://images.pexels.com/photos/18354020/pexels-photo-18354020/free-photo-of-pretzels-on-white-background.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" style="width:100%" alt="Pretzels">
+      </div>
+    </div>
+
     <!-- End Right Column -->
     </div>
     
@@ -440,18 +471,32 @@ function padWithZero(str, minLength) {
   return str;
 }
 
+
 function toggleMenu() {
   const navbar = document.getElementById("navbar");
   navbar.classList.toggle("open");
 }
 
 function toggleMenuMob() {
-  const navbar = document.getElementById("navbarMob");
-  navbar.classList.toggle("open");
+  const navbarMob = document.getElementById("navbarMob");
+  navbarMob.classList.toggle("open");
 }
-
 
 </script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

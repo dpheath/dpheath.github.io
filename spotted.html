@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Daniel Heath</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+	<meta name="google-site-verification" content="HljCmvOe77GIolVY2oPoIYgQMGMBQGa9rr8EmpBwftE" />
+    <style>
+      html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
+    </style>
+    <style type="text/css">
+      .mobileShow { display: none;}
+      /* Smartphone Portrait and Landscape */
+      @media only screen
+      and (min-device-width : 320px)
+      and (max-device-width : 480px){ .mobileShow { display: inline;}}
+    </style>
+    <style type="text/css">
+      .mobileHide { display: inline;}
+      /* Smartphone Portrait and Landscape */
+      @media only screen
+      and (min-device-width : 320px)
+      and (max-device-width : 480px){  .mobileHide { display: none;}}
+    </style>
+
+    <style>
+      p.big {
+        margin-top: 0.6em ;
+        margin-bottom: 0.6em ;
+      } 
+    </style>
+    <style>
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    </style>
+    <style>
+      a:link {
+        color: #73a3cd;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: #73a3cd;
+        background-color: transparent;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: #73a3cd;
+        background-color: transparent;
+        text-decoration: underline;
+      }
+    </style>   
+
+<style>
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+ul#navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;          /* horizontal on desktop */
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+ul#navbarMob {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;        
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+ul#navbar li {
+  position: relative;
+}
+
+ul#navbarMob li {
+  position: relative;
+}
+
+ul#navbar li a {
+  display: block;
+  color: #73A3CD;
+  padding: 5px 16px;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+ul#navbarMob li a {
+  display: block;
+  color: #73A3CD;
+  padding: 5px 16px;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+
+ul#navbar li a:hover {
+  background-color: #6C2A90;
+  text-decoration: underline;
+}
+
+ul#navbarMob li a:hover {
+  background-color: #6C2A90;
+  text-decoration: underline;
+}
+
+/* Style the dropdown button */
+.dropbtn {
+  background-color: #9C27B0;
+  color: #73A3CD;
+  padding: 5px 16px;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+/* Dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #9C27B0;
+  width: 100%;
+  overflow:auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Links inside dropdown content */
+ul#navbar .dropdown-content li a {
+  color: #73A3CD;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+  text-align: left;
+
+}
+
+ul#navbarMob .dropdown-content li a {
+  color: #73A3CD;
+  padding: 14px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 18px;
+  text-align: left;
+
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #6C2A90;
+  text-decoration: underline;
+}
+
+/* Show the dropdown content on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change background color of dropdown button on hover */
+.dropdown:hover .dropbtn {
+  background-color: #6C2A90;
+}
+
+/* Hamburger Button - hidden on desktop */
+.hamburger {
+  display: none;
+  background-color: #9C27B0;
+  color: #73A3CD;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  padding: 5px 16px;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  ul#navbar {
+    flex-direction: column; 
+    align-items: flex-start;
+    display: none;
+    width: 100%;
+  }
+  
+  ul#navbarMob {
+    flex-direction: column;  
+    align-items: flex-start;
+    display: none;
+    width: 100%;
+    width: 100%;
+  }
+
+  ul#navbar.open {
+    display: flex;
+  }
+  
+  ul#navbarMob.open {
+    display: flex;
+  }
+
+  .dropdown-content {
+    position: static;     
+    display: none;
+    width: 100%;
+    background-color: #9C27B0;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  ul#navbar li,
+  ul#navbarMob li {
+    width: 100%;
+  }
+
+  ul#navbar li a,
+  ul#navbarMob li a {
+    width: 100%;
+    text-align: left;
+  }
+
+}
+
+</style>
+
+
+  </head>
+<body class="w3-light-grey">
+
+
+
+<!-- Page Container -->
+<div class="w3-content w3-margin-top" style="max-width:1400px;", id="home">
+
+<!-- This is awful but I can't fix it right now -->
+
+<div class="desktop">
+<div class="mobileHide">
+  <header class="w3-container w3-center w3-margin-top">
+  <div class="w3-display-container" style="max-width:1400px;">
+  <div class="w3-card w3-purple", style="max-width:1400px; text-align: right;">
+    <div class="navbar-container">
+    <!-- Hamburger Menu for Small Screen -->
+    <button class="hamburger" onclick="toggleMenu()">☰</button>
+    
+    <ul id="navbar">
+      <li><a href="index.html">[Home]</a></li>
+      <li><a href="research.html">[Research]</a></li>
+      <li><a href="#">[Where I've been]</a></li>
+      <li class="dropdown">
+        <button class="dropbtn">Crosswords
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<ul class="dropdown-content">
+		  <li><a href="crosswords.html">[Crosswords]</a></li>
+		  <li><a href="advent.html">[Advent 2025]</a></li>
+		</ul>
+      </li>
+    </ul>
+  </div>
+  </div>
+  </div>
+  </header>
+  
+
+
+</div>
+
+<div class="mobileShow">
+  <header class="w3-container w3-center w3-margin-top">
+  <div class="w3-display-container" style="max-width:1400px;">
+  <div class="w3-card w3-purple", style="max-width:1400px; text-align: right;">
+    <div class="navbar-container">
+    <!-- Hamburger Menu for Small Screen -->
+    <button class="hamburger" onclick="toggleMenuMob()">☰</button>
+    
+    <ul id="navbarMob">
+      <li><a href="index.html">[Home]</a></li>
+      <li><a href="research.html">[Research]</a></li>
+      <li><a href="#">[Where I've been]</a></li>
+      <li class="dropdown">
+        <button class="dropbtn">Crosswords
+		  <i class="fa fa-caret-down"></i>
+		</button>
+		<ul class="dropdown-content">
+		  <li><a href="crosswords.html">[Crosswords]</a></li>
+		  <li><a href="advent.html">[Advent 2025]</a></li>
+		</ul>
+      </li>
+    </ul>
+  </div>
+  </div>
+  </div>
+  </header>
+  
+
+
+</div>  
+
+
+</div>
+
+
+  <!-- The Grid -->
+  <div class="w3-row-padding">
+
+    <div class="desktop">
+      <!-- Left Column -->
+      <div class="mobileHide">
+        <div class="w3-col" style="width:260px">
+        <div class="w3-white w3-text-grey w3-card-4">
+          <div class="w3-display-container">
+            <img src="me_in_newcastle.png" style="width:100%" alt="Me">
+			<img src="pretzel-like-object.png" style="width:100%" alt="Me">
+			<img src="me_cropped.png" style="width:100%" alt="Me">
+			<img src="me_cropped_old.png" style="width:100%" alt="Me">
+			<img src="https://images.pexels.com/photos/18354020/pexels-photo-18354020/free-photo-of-pretzels-on-white-background.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" style="width:100%" alt="Pretzels">
+          </div>
+          <div class="w3-container">
+            <p><center><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-purple"></i><br>
+			Office 1.127<br>
+			Alan Turing Building<br>
+			Manchester<br>
+			M13 9PY<br>
+			///gravy.aura.bonds
+			</center></p>
+            <p><center><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-purple"></center></i><center>daniel.heath-2@manchester.ac.uk</center></p>
+            <p><center><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-purple"></i><br>
+			0161 275 7649</center></p>
+            <hr>
+          </div>
+          
+        </div><br>
+        <p><center>This information on this page was last updated on <span id="lastmod"></span></p>
+      <!-- End Left Column -->
+  
+    </div>
+  </div>
+    <!-- Right Column -->
+    <div class="w3-rest">
+      <!-- Mobile Only -->
+      <div class="mobileShow">
+        <div class="w3-display-container">
+          <img object-fit: cover; src="me_cropped.png" alt="Me">
+          <div class="w3-display-topleft w3-container w3-text-purple">
+            <h4>Daniel Heath</h4><h5>Personal Webpage</h5>
+          </div>
+        </div>
+        <div class="w3-container">
+            <p><center><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-purple"></i><br>
+			Office 1.127<br>
+			Alan Turing Building<br>
+			Manchester<br>
+			M13 9PY<br>
+			///gravy.aura.bonds
+			</center></p>
+            <p><center><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-purple"></center></i><center>daniel.heath-2@manchester.ac.uk</center></p>
+            <p><center><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-purple"></i><br>
+			0161 275 7649</center></p>
+            <hr>
+          </div>
+      </div>
+      <!-- Mobile Hidden -->
+      <div class="mobileHide">
+        <img object-fit: cover; src="manchester.png" alt="Manchester" width="128" height="128">
+      </div>
+      <div class="w3-container w3-card w3-white", id="spotted">
+        <h2 class="w3-text-grey w3-padding-16"><i class="fas fa-glasses fa-fw w3-margin-right w3-xxlarge w3-text-purple"></i>Where you may have seen me...</h2>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Teaching and External Mathematics</b></h5>
+          <p><span style="color: purple">2023--Pres.</span> Coordinator for <a href ="https://www.maths.manchester.ac.uk/mathsbombe/", target="_blank", rel="noopener noreferrer">MathsBombe</a>.<br>
+            <span style="color: purple">2022--2024</span> MATH20621 Programming with Python.<br>
+          <span style="color: purple">2022--2023</span> MATH20201 Algebraic Structures 1.<br>
+          I've also performed marking, covering and invigilation duties for various MATH units.</p>
+          <hr>
+        </div>
+
+	<div class="w3-container">
+          <h5 class="w3-opacity"><b>Organisation</b></h5>
+	  <p class="big"><span style="color: purple">11-04-2025</span> <a href="https://manchester-semigroups.github.io/NBSAN/index.html", target="_blank", rel="noopener noreferrer">NBSAN XXXVII</a>, University of Manchester.<br>With <a href="https://sites.google.com/view/josiahaakre/", target="_blank", rel="noopener noreferrer">Josiah Aakre</a> and <a href="https://sites.google.com/view/thomasaird", target="_blank", rel="noopener noreferrer">Thomas Aird</a>.<br></p>
+	  <p class="big"><span style="color: purple">09-04-2025</span> <a href="https://sites.google.com/view/itmaia2025", target="_blank", rel="noopener noreferrer">Introduction to Modern Advances in Algebra 2025</a>, University of Manchester.<br>With <a href="https://imartin-lyons.github.io/", target="_blank", rel="noopener noreferrer">Isabel Martin-Lyons</a>.<br></p>
+	  <p class="big"><span style="color: purple">Winter 2024</span> Reading Group on C*-Algebras, University of Manchester.</p>
+          <p class="big"><span style="color: purple">2023/2024</span> Pure Postgraduate Seminar, University of Manchester.<br>With <a href="https://antonfarmar.github.io/", target="_blank", rel="noopener noreferrer">Anton Farmar</a> and Peej Ingarfield.<br></p>
+	  <p class="big"><span style="color: purple">25-03-2022</span> <a href="https://manchester-semigroups.github.io/NBSAN/index.html", target="_blank", rel="noopener noreferrer">NBSAN XXXI: Young NBSAN</a>, University of Manchester.<br>With <a href="https://sites.google.com/view/thomasaird", target="_blank", rel="noopener noreferrer">Thomas Aird</a>, Dmitry Kudryavtsev, <a href="https://sites.google.com/view/cf-nb/", target="_blank", rel="noopener noreferrer">Carl-Fredrik Nyberg Brodda</a> and Georgia Schneider.</p>
+          <hr>
+        </div>
+
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Selected talks and poster presentations</b></h5>
+		<i class="fas fa-exclamation-circle fa-fw w3-margin-right w3-large w3-text-purple"></i>For a complete list of presentations, see the complete list <a href="talks.pdf", target="_blank", rel="noopener noreferrer">here</a>.
+		
+		<p style="margin:25px;"></p>
+
+<!-- <p class="big"><span style="color: #ff0000">(05-02-2025)</span> ,  , University of Manchester.<br></p> 
+
+<p style="margin:25px;"></p>
+
+-->
+
+<p class="big"><span style="color: #ff0000">(29-05-2026)</span> Geometric models for restriction semigroups, Semigroup Seminar, University of Manchester.<br></p> 
+
+
+
+
+<p class="big"><span style="color: purple">04-02-2026</span> Planar graphs, Monthly Seminar, <a href="https://www.rochdalesfc.ac.uk/", target="_blank", rel="noopener noreferrer">Rochdale Sixth Form College</a>.  <a href="Slides_and_Talks/Planar_Rochdale26.pdf", target="_blank", rel="noopener noreferrer", style="color: green">[Slides]</a><br></p> 
+
+<p class="big"><span style="color: purple">15-12-2025</span> Pretzel monoids, <a href="https://manchester-semigroups.github.io/NBSAN/index.html", target="_blank", rel="noopener noreferrer">NBSAN XXXIX</a>, Durham University.  <a href="Slides_and_Talks/Pretzel_Monoids_Durham25.pdf", target="_blank", rel="noopener noreferrer", style="color: green">[Slides]</a><br></p> 
+
+<p class="big"><span style="color: purple">26-09-2025</span> Pretzel Monoids, <a href="https://sites.google.com/view/MRSC2025", target="_blank", rel="noopener noreferrer">MRSC XIX</a>, University of Manchester. <a href="Slides_and_Talks/Pretzel_Poster.pdf", target="_blank", rel="noopener noreferrer", style="color: green">[Poster]</a> <b>Awarded best poster.</b> <br></p>
+
+<p class="big"><span style="color: purple">26-09-2025</span> How to complete a PhD (by someone who has*), <a href="https://sites.google.com/view/MRSC2025", target="_blank", rel="noopener noreferrer">MRSC XIX</a>, University of Manchester. <a href="Slides_and_Talks/MRSC25.pdf", target="_blank", rel="noopener noreferrer", style="color: green">[Slides]</a> <br></p>
+
+<p class="big"><span style="color: purple">03-07-2025</span> Growth of monogenic free adequate monoids, <a href="https://www.tca2025.uevora.pt/thematic_sessions/", target="_blank", rel="noopener noreferrer">Geometric and Combinatorial (Inverse) Semigroup Theory</a> at <a href="https://www.tca2025.uevora.pt", target="_blank", rel="noopener noreferrer">Theoretical and Computational Algebra 2025</a>, Universidade de &#201;vora, PT. <a href="Slides_and_Talks/Growth_Evora25.pdf", target="_blank", rel="noopener noreferrer", style="color: green">[Slides]</a><br></p> 
+
+<p class="big"><span style="color: purple">24-04-2025</span> An Introduction to Semigroup Theory, <a href="https://heilbronn.ac.uk/2025/04/10/transpennine-expressers/", target="_blank", rel="noopener noreferrer">Transpennine Expressers Conference</a>, University of Sheffield.<br></p> 
+
+<p class="big"><span style="color: purple">10-04-2025</span> Pretzel Monoids, <a href="https://sites.google.com/view/itmaia2025", target="_blank", rel="noopener noreferrer">Introduction to Modern Advances in Algebra 2025</a>, University of Manchester. <a href="Slides_and_Talks/Pretzel_Poster.pdf", target="_blank", rel="noopener noreferrer", style="color: green">[Poster]</a><br></p> 
+
+<p class="big"><span style="color: purple">05-02-2025</span> Singly aligned monoids and group(oid)-embeddability relating to C*-algebras, Student Algebra Seminar, University of Manchester.<br></p>
+
+<p class="big"><span style="color: purple">11-12-2024</span> Quasivarieties, Adequate Monoids and Expansions, <a href="https://www-users.york.ac.uk/~varg1/yorksemigroup.htm", target="_blank", rel="noopener noreferrer">York Semigroup</a>, University of York. <a href="Slides_and_Talks/Pretzel_Monoids_York24.pdf", target="_blank", rel="noopener noreferrer", style="color: green">[Slides]</a><br></p> 
+
+<p class="big"><span style="color: purple">22-11-2024</span> Moroccan birds, coots, risk unending snow stoms for this talk? (13, 2, 10) - Combinatorics on Crosswords, Pure Postgraduate Seminar, University of Manchester. <a href="Slides_and_Talks/crosswords.pdf", target="_blank", rel="noopener noreferrer", style="color: green">[Slides]</a> <b>Voted talk of the year.</b><br></p> 
+
+<p class="big"><span style="color: purple">27-09-2024</span> Three Cornerstones of Pure Mathematics, MRSC XVIII, University of Manchester.<br></p>
+
+<p class="big"><span style="color: purple">04-09-2024</span> Pretzel Monoids: A Dive into Geometric Semigroup Theory, <a href="https://heilbronn.ac.uk/2024/01/17/heilbronn-annual-conference-2024/", target="_blank", rel="noopener noreferrer">HDP 1-Day at Heilbronn Annual Conference 2024</a>, University of Bristol. <a href="Slides_and_Talks/Pretzel_Monoids_Bristol24.pdf", target="_blank", rel="noopener noreferrer", style="color: green">[Slides]</a><br></p>
+
+<p class="big"><span style="color: purple">02-07-2024</span> Pretzel Monoids: Left Adequate Expansions of R. Cancellative Monoids, <a href="https://sites.google.com/fct.unl.pt/t-c-algebra", target="_blank", rel="noopener noreferrer">Theoretical and Computational Alg. '24</a>, Universidade de Aveiro, PT. <a href="Slides_and_Talks/Pretzel_Monoids_Aveiro24.pdf", target="_blank", rel="noopener noreferrer", style="color: green">[Slides]</a><br></p>
+
+<p class="big"><span style="color: purple">19-06-2024</span> Pretzel Monoids: Left Adequate Expansions of R. Cancellative Monoids, <a href="https://sites.google.com/view/bmc2024/home", target="_blank", rel="noopener noreferrer">75th British Mathematical Colloquium</a>, University of Manchester. <a href="Slides_and_Talks/Pretzel_Monoids_BMC24.pdf", target="_blank", rel="noopener noreferrer", style="color: green">[Slides]</a><br></p>
+
+<p class="big"><span style="color: purple">19-06-2024</span> Pretzel Monoids, <a href="https://sites.google.com/view/bmc2024/home", target="_blank", rel="noopener noreferrer">75th British Mathematical Colloquium</a>, University of Manchester. <a href="Slides_and_Talks/Pretzel_Poster.pdf", target="_blank", rel="noopener noreferrer", style="color: green">[Poster]</a><br></p>
+
+<p class="big"><span style="color: purple">13-06-2024</span> Non-Embeddable Right LCM Semigroups, <a href="https://sites.google.com/view/ukoaconference/home", target="_blank", rel="noopener noreferrer">UK Operator Algebras Conference</a>, Newcastle University.<br></p>
+
+<p class="big"><span style="color: purple">07-06-2024</span> C*-Algebras, Right LCM and Interval Monoids, Semigroup Seminar, University of Manchester.<br></p>
+
+<p class="big"><span style="color: purple">15-04-2024</span> Embedding (Right LCM) Semigroups into Groups, Student Algebra Seminar, University of Manchester.<br></p>
+
+<p class="big"><span style="color: purple">21-02-2024</span> Pretzel Monoids: A Dive into Geometric Semigroup Theory, <a href="https://sites.google.com/view/itmaia/home", target="_blank", rel="noopener noreferrer">Introduction to Modern Advances in Algebra</a>, University of Exeter. <a href="Slides_and_Talks/Pretzel_Monoids_Exeter24.pdf", target="_blank", rel="noopener noreferrer", style="color: green">[Slides]</a><br></p>
+
+<p class="big"><span style="color: purple">29-09-2023</span> Left Adequate Semigroups and Graph Expansions, <a href="https://heilbronn.ac.uk/2023/09/26/the-manchester-research-students-conference/", target="_blank", rel="noopener noreferrer">MRSC XVII</a>, University of Manchester.<br></p>
+
+<p class="big"><span style="color: purple">11-08-2022</span> Food Supply Graphs, <a href="https://heilbronn.ac.uk/2023/07/27/2022-hdp-summer-workshop/", target="_blank", rel="noopener noreferrer">HDP Summer Programme 2022</a>, ICMS Edinburgh.<br></p>
+
+<p class="big"><span style="color: purple">17-12-2021</span> Free Adequate Semigroups, Semigroup Seminar, University of Manchester.<br>
+</p>
+          <hr>
+        </div>
+        <div class="w3-container">
+          <h5 class="w3-opacity"><b>Selected other conferences and meetings</b></h5>
+
+<p class="big"><span style="color: purple">11-04-2025</span> <a href="https://manchester-semigroups.github.io/NBSAN/index.html", target="_blank", rel="noopener noreferrer">NBSAN XXXVII</a>, University of Manchester <b>(Organiser)</b>.</p>
+
+<p class="big"><span style="color: purple">09-04-2025</span> <a href="https://sites.google.com/view/itmaia2025", target="_blank", rel="noopener noreferrer">Introduction to Modern Advances in Algebra 2025</a>, University of Manchester <b>(Organiser)</b>.</p>
+
+<p class="big"><span style="color: purple">Weekly 23/24</span> Pure Postgraduate Seminar, University of Manchester <b>(Organiser)</b>.</p>
+
+<p class="big"><span style="color: purple">24-07-2023</span> <a href="https://heilbronn.ac.uk/2023/07/27/2023-hdp-summer-workshop/", target="_blank", rel="noopener noreferrer">HDP Summer Programme 2023</a>, University of Bristol.</p>
+
+<p class="big"><span style="color: purple">03-07-2023</span> <a href="https://sites.fct.unl.pt/tca2023/home", target="_blank", rel="noopener noreferrer">Theoretical and Computational Algebra 2023</a>, Pocinho, PT.</p>
+
+<p class="big"><span style="color: purple">24-06-2022</span> <a href="https://personalpages.manchester.ac.uk/staff/Nora.Szakacs/GST/index.html", target="_blank", rel="noopener noreferrer">Topics in Geometric Semigroup Theory and NBSAN XXXII</a>, University of York.</p>
+
+<p class="big"><span style="color: purple">25-03-2022</span> <a href="https://manchester-semigroups.github.io/NBSAN/index.html", target="_blank", rel="noopener noreferrer">NBSAN XXXI: Young NBSAN</a>, University of Manchester <b>(Organiser)</b>.</p>
+<br>
+        </div>
+      </div>
+	  
+	  
+
+    <!-- Mobile Only -->
+    <div class = "mobileShow">
+      <div class="w3-display-container">
+        <img src="https://images.pexels.com/photos/18354020/pexels-photo-18354020/free-photo-of-pretzels-on-white-background.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" style="width:100%" alt="Pretzels">
+      </div>
+    </div>
+
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+  <!-- End Page Container -->
+</div>
+<!-- Footer -->
+<footer class="w3-container w3-purple w3-center w3-margin-top">
+  <p></p><!-- End footer -->
+ </footer>
+
+
+<script>
+var date = new Date(document.lastModified);
+date = formatAsUKDate(date);
+document.getElementById("lastmod").innerHTML = date;
+
+function formatAsUKDate(date) {
+  var day = padWithZero(date.getDate(), 2);
+  var month = padWithZero(date.getMonth()+1, 2);
+  var year = date.getFullYear();
+  var hour = padWithZero(date.getHours(), 2);
+  var minute = padWithZero(date.getMinutes(), 2);
+  if (date.getHours() >= 12) {
+  	timehalf = 'pm';
+  } else {
+  	timehalf = 'am';
+  }
+  
+  
+  return  day + '-' + month + '-' + year + ' at ' + hour + ':' + minute + timehalf + '.';
+}
+
+function padWithZero(str, minLength) {
+  str = String(str);
+  while (str.length < minLength) {
+    str = '0' + str;
+  }
+  return str;
+}
+
+
+function toggleMenu() {
+  const navbar = document.getElementById("navbar");
+  navbar.classList.toggle("open");
+}
+
+function toggleMenuMob() {
+  const navbarMob = document.getElementById("navbarMob");
+  navbarMob.classList.toggle("open");
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
